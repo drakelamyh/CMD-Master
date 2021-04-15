@@ -1,0 +1,34 @@
+######################################################################## Command Prompt ########################################################################
+
+
+# To see what files you have at current directory
+dir
+
+# To see which directory you are in
+cd
+
+# To change directory into next level of folder e.g. Desktop
+cd Desktop
+
+# To go up one layer
+cd ..
+
+# To go up two layers
+cd ..\..
+
+# To change directory to specified folder location (regardless of current location)
+cd "C:\Users\XXX\Dropbox\MOOC Elearning\Coursera - Python\Course 1"
+
+# Open File Explorer at current directory
+start .
+
+# To open name of file (need double inverted commas if file name has spaces in it)
+filename.txt
+"file name.txt"
+
+# To clear command prompt screen
+cls
+
+# To exit from Command Prompt
+exit
+
