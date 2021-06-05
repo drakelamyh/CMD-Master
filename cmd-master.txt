@@ -32,3 +32,5 @@ cls
 # To exit from Command Prompt
 exit
 
+# To check if two files are the same, or if the file matches what is being downloaded, compare the file checksum.
+certUtil -hashfile "C:\Users\Username\Desktop\Example.txt" SHA256
