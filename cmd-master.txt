@@ -32,5 +32,21 @@ cls
 # To exit from Command Prompt
 exit
 
+
+
+
+
+
+
+
+
+# Shows all Wi-Fi profiles saved
+netsh wlan show profile
+
+# Show Wi-Fi password of a particular Wi-Fi profile (replace WiFiName with name of Wi-Fi)
+netsh wlan show profile WiFiName key=clear
+
+
+
 # To check if two files are the same, or if the file matches what is being downloaded, compare the file checksum.
 certUtil -hashfile "C:\Users\Username\Desktop\Example.txt" SHA256
