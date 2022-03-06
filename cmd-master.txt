@@ -66,6 +66,11 @@ wmic logicaldisk get deviceid, volumename, description
 
 
 
+# Check full specs of RAM
+wmic memorychip list full
+
+
+
 # Run Check Disk and fix errors (Requires Admin)
 chkdsk c: /f
 
