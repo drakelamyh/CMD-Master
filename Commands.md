@@ -117,12 +117,42 @@ Logs on to a Website from the Command Line
 
 
 
-## Checksum ##
+## Comparisons ##
 
 To check if two files are the same, or if the file matches what is being downloaded, compare the file checksum.
 
 `certUtil -hashfile "C:\Users\Username\Desktop\Example.txt" SHA256`
 
+File Compare to to identify differences in text between two files
+
+Typing `/b` compares only binary output, `/c` disregards the case of text in the comparison, and `/l` only compares ASCII text.
+
+`fc "C:\Program Files (x86)\example1.doc" "C:\Program Files (x86)\example2.doc"`
+
+
+
+
+
+
+
+
+## Cipher ##
+
+Checks encryption state of current directory and files it contains
+
+`cipher`
+
+wipe free space on the drive (does not overwrite undeleted data)
+
+`cipher /w:d`
+
+Encrypt a file
+
+`cipher /e:<filename>`
+
+Decrypt selected file
+
+`cipher /d:<filename>`
 
 
 
@@ -200,6 +230,9 @@ Controls Configurable Power Settings
 `powercfg`
 
 For example, you can use `powercfg /energy` to generate a battery health report. Can find the HTML report in `C:\Windows\system32\energy-report.html`
+
+
+
 
 
 
