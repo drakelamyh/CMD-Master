@@ -1,4 +1,4 @@
-# COmmand Prompt #
+# Command Prompt #
 
 ## General navigation ##
 
