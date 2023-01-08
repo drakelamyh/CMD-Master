@@ -10,6 +10,8 @@ To see which directory you are in
 
 `cd`
 
+`chdir`
+
 To change directory into next level of folder e.g. Desktop
 
 `cd Desktop`
@@ -44,6 +46,42 @@ To exit from Command Prompt
 
 `exit`
 
+Run the Command Prompt as an Administrator
+
+`powershell start cmd -v runAs`
+
+Creates a Folder
+
+`mkdir "folder name"`
+
+Deletes a Folder
+
+`rmdir`
+
+Delete file
+
+`del "file name.txt"`
+
+Moves a File or Folder to a Specified Folder
+
+`move hello.txt folder_name`
+
+Renames a File with the Syntax
+
+`ren filename.extension new-name.extension`
+
+Shows the Tree of the Current Directory or Specified Drive
+
+`tree`
+
+Provides a Guide to other Commands
+
+`-help`
+
+Stops the Execution of a Command
+
+`CTRL + C`
+
 
 
 
@@ -59,6 +97,24 @@ Shows all Wi-Fi profiles saved
 Show Wi-Fi password of a particular Wi-Fi profile (replace WiFiName with name of Wi-Fi)
 
 `netsh wlan show profile WiFiName key=clear`
+
+Shows All Wi-Fi Passwords
+
+`for /f "skip=9 tokens=1,2 delims=:" %i in ('netsh wlan show profiles') do @echo %j | findstr -i -v echo | netsh wlan show profiles %j key=clear`
+
+Shows Information about PC IP Addresses and Connections
+This command also has extensions such as `ipconfig /release`, `ipconfig /renew`, and `ipconfig /flushdns` which you can use to troubleshoot issues with internet connections.
+
+`ipconfig`
+
+Logs on to a Website from the Command Line
+
+`start www.google.com`
+
+
+
+
+
 
 
 ## Checksum ##
@@ -77,6 +133,10 @@ To check if two files are the same, or if the file matches what is being downloa
 
 ## Computer Specs ##
 
+Shows Your PC's Details
+
+`systeminfo`
+
 List Hard Disks with Device ID, Volume Name and Description
 
 `wmic logicaldisk get deviceid, volumename, description`
@@ -84,6 +144,45 @@ List Hard Disks with Device ID, Volume Name and Description
 Check full specs of RAM
 
 `wmic memorychip list full`
+
+Lists All Installed Drivers
+
+`driverquery`
+
+Lists Programs and the Extensions They are Associated With
+
+`assoc`
+
+Shows the Version of the OS
+
+`ver`
+
+Shows Open Programs
+
+`tasklist`
+
+Terminates a Running Task
+
+`taskkill /IM "task.exe" /F`
+
+Shows the Serial Number and Label Info of the Current Drive
+
+`vol`
+
+Shuts down, Restarts, Hibernates, Sleeps the Computer
+
+`shutdown`
+
+Restart computer
+
+`shutdown /r`
+
+
+
+
+
+
+
 
 
 ## Repairs ##
@@ -96,7 +195,11 @@ Run System File Checker to fix corrupted files (Requires Admin)
 
 `sfc /scannow`
 
+Controls Configurable Power Settings
 
+`powercfg`
+
+For example, you can use `powercfg /energy` to generate a battery health report. Can find the HTML report in `C:\Windows\system32\energy-report.html`
 
 
 
