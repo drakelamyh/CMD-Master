@@ -103,13 +103,33 @@ Shows All Wi-Fi Passwords
 `for /f "skip=9 tokens=1,2 delims=:" %i in ('netsh wlan show profiles') do @echo %j | findstr -i -v echo | netsh wlan show profiles %j key=clear`
 
 Shows Information about PC IP Addresses and Connections
-This command also has extensions such as `ipconfig /release`, `ipconfig /renew`, and `ipconfig /flushdns` which you can use to troubleshoot issues with internet connections.
 
 `ipconfig`
+
+Release current IP address
+
+`ipconfig /release`
+
+Get new IP address (after releasing current IP address)
+
+`ipconfig /renew`
+
+Refresh DNS cache
+
+`ipconfig /flushdns`
 
 Logs on to a Website from the Command Line
 
 `start www.google.com`
+
+List of currently open ports and related IP addresses, what state the port is in; listening, established, or closed.
+`netstat -an`
+
+Test connectivity whether packets are making it to a specific networked device
+
+`ping www.google.com`
+
+
 
 
 
@@ -163,9 +183,13 @@ Decrypt selected file
 
 ## Computer Specs ##
 
-Shows Your PC's Details
+Shows Your PC's details
 
 `systeminfo`
+
+Show other PC's details on local network
+
+`systeminfo /s [host_name] /u [domain]\[user_name] /p [user_password]`
 
 List Hard Disks with Device ID, Volume Name and Description
 
@@ -187,7 +211,7 @@ Shows the Version of the OS
 
 `ver`
 
-Shows Open Programs
+Shows Open Programs (including hidden tasks on Task Manager)
 
 `tasklist`
 
@@ -203,9 +227,19 @@ Shuts down, Restarts, Hibernates, Sleeps the Computer
 
 `shutdown`
 
+Shutdown computer
+
+`shutdown /s`
+
 Restart computer
 
 `shutdown /r`
+
+Restart computer and launches the Advanced Start Options menu (where you can access Safe Mode and Windows recovery utilities)
+
+`shutdown /r /o`
+
+
 
 
 
@@ -227,9 +261,11 @@ Run System File Checker to fix corrupted files (Requires Admin)
 
 Controls Configurable Power Settings
 
+For example, you can use `powercfg /energy` to generate a battery health report. Can find the HTML report in `C:\Windows\system32\energy-report.html`
+
 `powercfg`
 
-For example, you can use `powercfg /energy` to generate a battery health report. Can find the HTML report in `C:\Windows\system32\energy-report.html`
+
 
 
 
@@ -249,5 +285,17 @@ To scan the Windows image for any corruption:
 To fix Windows image:
 
 `DISM /Online /Cleanup-Image /RestoreHealth /Source:repairSource\install.wim`
+
+
+
+
+
+## Format (requires Admin) ##
+
+Quick-format the D drive with the exFAT file system, with an allocation unit size of 2048 bytes, and rename the volume to "label" (without the quotes).
+
+`format D: /Q /FS:exFAT /A:2048 /V:label`
+
+
 
 
