@@ -1,2 +1,2 @@
 # CMD-Master Readme
-Repo to contain master list of all Command Prompt commands
+Repo to contain useful Command Prompt commands
