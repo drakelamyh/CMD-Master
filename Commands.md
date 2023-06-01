@@ -82,7 +82,9 @@ Stops the Execution of a Command
 
 `CTRL + C`
 
+Command Prompt
 
+`control`
 
 
 
