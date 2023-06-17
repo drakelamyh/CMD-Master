@@ -80,7 +80,7 @@ Provides a Guide to other Commands
 
 Stops the Execution of a Command
 
-`CTRL + C`
+Press CTRL + C
 
 Command Prompt
 
