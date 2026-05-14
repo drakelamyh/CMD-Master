@@ -104,6 +104,10 @@ Shows All Wi-Fi Passwords
 
 `for /f "skip=9 tokens=1,2 delims=:" %i in ('netsh wlan show profiles') do @echo %j | findstr -i -v echo | netsh wlan show profiles %j key=clear`
 
+Returns the media access control (MAC) address and list of network protocols associated with each address for all network cards in each computer, either locally or across a network
+
+`getmac`
+
 Shows Information about PC IP Addresses and Connections
 
 `ipconfig`
@@ -185,9 +189,15 @@ Decrypt selected file
 
 ## Computer Specs ##
 
-Shows Your PC's details
+| Description | Command |
+| -------- | -------- |
+| Shows Your PC's details | `systeminfo` |
+| Displays the host name portion of the full computer name of the computer | `hostname` |
+| Get serial number of computer | `wmic bios get serialnumber` |
 
-`systeminfo`
+
+
+
 
 Show other PC's details on local network
 
